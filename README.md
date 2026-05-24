@@ -1,71 +1,75 @@
 📊 Smart Employee Management System (Frontend)
 
-A modern, responsive, and production-ready Employee Management System frontend built using React.js + Vite + Tailwind CSS, designed for efficient HR and workforce management with real-time backend integration.
+A modern, responsive, and production-ready Employee Management System frontend built using React.js, Vite, and Tailwind CSS, designed for efficient HR and workforce management with real-time backend integration.
 
-🚀 Live Overview
+🚀 Overview
 
-This frontend connects to a Spring Boot backend API and provides a complete HR management dashboard including employees, departments, salary processing, reports, and analytics.
+This application connects to a Spring Boot backend API and provides a complete HR management dashboard for managing employees, departments, salary processing, reports, and analytics.
+
+It is designed as a SaaS-style enterprise UI with clean architecture, reusable components, and scalable structure.
 
 ✨ Key Features
 🔐 Authentication & Security
-JWT-based login system
+JWT-based authentication system
 Protected routes with role-based access
-Session persistence using localStorage
+Persistent login using localStorage
 Forgot password (security question-based flow)
-Auto logout on token expiry
+Automatic session handling
 📊 Dashboard & Analytics
-Real-time stats (employees, departments, salaries)
+Real-time statistics (employees, departments, salaries)
 Interactive charts using Recharts
-Department-wise analytics
+Department-wise insights
 Recent activity overview
 👨‍💼 Employee Management
-Full CRUD operations
+Full CRUD operations (Create, Read, Update, Delete)
 Advanced search, filter, and sorting
 Pagination support
 Department mapping
-Clean tabular UI
+Clean and responsive table UI
 🏢 Department Module
 Department overview cards
-Employee distribution per department
-Salary insights by department
+Employee distribution analytics
+Department-wise salary insights
 💰 Salary & Payroll System
 Salary calculation engine
 Payslip generation
-Bonus, tax, and PF handling
+Tax, bonus, and PF handling
 Export-ready payroll reports
 📑 Reports & Analytics
-Performance reports
-Salary analytics
+Performance analytics
+Salary reports
 Department reports
 Export support (CSV / PDF)
 🔔 Notification System
-Real-time notification dropdown
+Real-time notification dropdown UI
 Unread count badge
 Mark as read / mark all as read
-Event-based notifications (Employee add/update/delete)
+Event-based notifications (employee actions)
 🎨 UI/UX Features
-Fully responsive design (mobile + desktop)
+Fully responsive design (mobile, tablet, desktop)
 Dark / Light mode support
-Reusable UI component system
-Smooth animations (Framer Motion)
-Toast notifications (react-hot-toast)
+Reusable component architecture
+Smooth animations using Framer Motion
+Toast notifications for user feedback
 🧱 Tech Stack
-⚛️ React 18
-⚡ Vite
-🎨 Tailwind CSS
-🔗 Axios (API integration)
-📊 Recharts (data visualization)
-🧠 Context API (state management)
-🎞 Framer Motion (animations)
+React 18
+Vite
+Tailwind CSS
+Axios
+Recharts
+React Router DOM
+Context API
+Framer Motion
+React Hot Toast
 📁 Project Structure
 src/
 │
-├── api/               # API service layer (Axios clients)
+├── api/               # API service layer (Axios setup)
 ├── components/        # Reusable UI components
-│   ├── layout/
-│   └── ui/
+│   ├── layout/        # Navbar, Sidebar
+│   └── ui/            # Buttons, Inputs, Tables, Modals
 ├── context/           # Auth & Theme context
-├── layouts/           # Main layout structure
+├── layouts/           # Main application layout
 ├── pages/             # Application pages
 │   ├── auth/
 │   ├── dashboard/
@@ -74,18 +78,19 @@ src/
 │   ├── salary/
 │   ├── reports/
 │   └── settings/
-├── routes/            # App routing & protected routes
+├── routes/            # Routing & protected routes
 ├── assets/            # Static assets
-└── main.jsx           # App entry point
+└── main.jsx           # Application entry point
 ⚙️ Backend Integration
 
 This frontend is designed to work with a Spring Boot backend API.
 
 🔗 Base URL
 http://localhost:4141
-🔐 Authentication
+🔐 Authentication Flow
 JWT token stored in localStorage
-Axios interceptor automatically attaches token
+Axios interceptor attaches token automatically
+Handles 401/403 responses globally
 🛠️ Installation & Setup
 1️⃣ Clone Repository
 git clone https://github.com/your-username/smart-ems-frontend.git
@@ -95,7 +100,7 @@ npm install
 3️⃣ Start Development Server
 npm run dev
 
-App runs at:
+Application runs at:
 
 http://localhost:5173
 🔑 Default Login (Development Only)
@@ -109,37 +114,39 @@ http://localhost:4141
 
 Required modules:
 
-Auth API (/auth/login, /auth/forgot-password)
+Authentication API
 Employee API
 Department API
 Salary API
 Reports API
 Notification API (optional enhancement)
-🔔 Notification System (Planned/Optional Upgrade)
-Backend-driven notifications
-Stored in database
-Real-time UI updates
+🔔 Notification System (Optional Upgrade)
+
+Planned enhancements:
+
+Backend-driven persistent notifications
+Database-stored alerts
+Real-time updates
 Bell icon dropdown system
 📦 Build for Production
 npm run build
 🧪 Testing Checklist
-✔ Login authentication works
-✔ Protected routes working
-✔ Employee CRUD operations
-✔ Department analytics load
-✔ Dashboard charts render
-✔ API integration successful
-✔ Responsive UI verified
+Login authentication works
+Protected routes function correctly
+Employee CRUD operations work
+Dashboard charts load properly
+API integration successful
+Responsive UI verified across devices
 🚀 Future Improvements
-WebSocket-based real-time updates
+WebSocket real-time updates
 Advanced HR analytics dashboard
-Role-based admin panel
-Email notifications system
 Attendance tracking module
+Email notification system
+Role-based admin panel enhancements
 👨‍💻 Author
 
 Shivanand Ulgulwad
 
 📜 License
 
-This project is licensed for educational and portfolio use.
+This project is for educational and portfolio demonstration purposes.
